@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>회원가입</h2>
+    <form  name="reginster">
+        <fieldset>
+            <legend>필수항목</legend>
+            <ul>
+                <li>
+     <label for="name">이름 <input type="text" name="name" id="name"></label>
+                </li>
+                <li>
+                    <label for="email">이메일 <input type="email" name="email" id="email"></label>
+                </li>
+                <li>
+                    <label for="password">비밀번호 <input type="password" name="password" id="password"></label>
+                </li>
+                <li>
+                    <label for="password2">비밀번호 확인 <input type="password" name="password2" id="password2"></label>
+                </li>
+                <li>
+                    <label for="tel">전화번호 <input type="tel" name="tel" id="tel"></label>
+                    </li>
+             <li>
+                    <label for="date">생년월일 <input type="date" name="date" id="date"></label>
+
+                </li>
+            </ul>
+              </fieldset>
+        </form>
+      
+        <form>
+            <fieldset>
+        <legend>인적사항</legend>
+        <ul>
+            <li>
+                <input type="radio" name="mailling" id="mailling" value="mailling_yes"><label for="mailling_yes"></label>
+            <input type="radio" name="mailling" name="mailling" id="mailling" value="mailling_no"><label for="mailling_no"></label>
+            </li>
+            <li>
+                <input type="checkbox" name="favortie" id="fa_sprots" value="sports"><label for="fa_sprots">스포츠</label>
+                <input type="checkbox" name="favortie" id="fa_media" value="media"><label for="fa_media">디지털기기</label>
+                <input type="checkbox" name="favortie" id="fa_movie" value="movie"><label for="fa_movie">영화</label>
+            </li>
+        </ul>
+        <input type="submit" value="제출">
+        <input type="reset" value="초기화">
+        </fieldset>
+    </form>
+</body>
+</html>
