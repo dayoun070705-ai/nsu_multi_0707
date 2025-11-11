@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>자리배치표</h1>
+    <script>
+        let memNum=parseInt(prompt(""));
+        let collum=parseInt(prompt(""));
+        if(memNum%collum==0)
+        rowNum=memNum/collum;
+    else
+    rowNum=memNum/collum+1;
+
+    document.write(`<table>`);
+        for(let i=0; i<rowNum; i++){
+            document.write(`<tr>`);
+            for(let j=0; j<collum; j++){
+                seatNo=i*collum*j;
+                if(seatNo>memNum) break;
+
+                document.write(`<td>좌석 ${seatNo}</td>`);
+            }
+            document.write(`</tr>`);
+        }
+        document.write(`</table>`);
+    </script>
+</body>
+</html>
