@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>가위바위보 게임</title>
+
+</head>
+
+<body>
+
+    <script>
+
+        function rpsGame() {
+
+            const choices = ["가위", "바위", "보"];
+
+            while (true) {
+                let user = prompt("가위바위보!\n0: 가위, 1: 바위, 2: 보\n종료하려면 'q' 입력");
+                if (user === null || user.toLowerCase() === "q") {
+                    alert("게임 종료");
+                    break;
+                }
+
+                if (isNaN(user) || user < 0 || user > 2) {
+                    alert("0, 1, 2 중 하나만 입력하세요");
+                    continue;
+                }
+
+                user = Number(user);
+                const com = Math.floor(Math.random() * 3);
+                let result = "";
+                const diff = (user - com + 3) % 3;
+
+
+                if (diff === 0) {
+                    result = "비겼습니다";
+                } 
+                else if (diff === 1) {
+                    result = "이겼습니다";
+                }
+                 else {
+                    result = "졌습니다";
+                }
+                alert(
+                    `당신: ${choices[user]}\n` +
+                    `컴퓨터: ${choices[com]}\n\n` +
+                    `결과: ${result}`
+                );
+            }
+        }
+        rpsGame();
+    </script>
+</body>
+</html>
